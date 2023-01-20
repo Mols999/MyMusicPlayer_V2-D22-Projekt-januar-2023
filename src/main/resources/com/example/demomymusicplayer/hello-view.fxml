@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demomymusicplayer.HelloController">
+   <children>
+      <ImageView fx:id="myImageView" fitHeight="301.0" fitWidth="225.0" layoutX="291.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/tfm/IdeaProjects/REALMusicPlayer/src/main/java/com/example/demomymusicplayer/ImageFolder/astronautLoungin.png" />
+         </image>
+      </ImageView>
+       <Button fx:id="createPlaylistButton" layoutX="781.0" layoutY="119.0" onAction="#createPlaylist" text="Create Playlist" />
+       <ListView fx:id="songsList" layoutX="38.0" layoutY="76.0" onMouseClicked="#songSelected" prefHeight="359.0" prefWidth="225.0">
+    </ListView>
+      <MediaView fx:id="mediaView" fitHeight="20.0" fitWidth="50.0" layoutX="198.0" layoutY="14.0" />
+      <Button fx:id="stopButton" layoutX="291.0" layoutY="382.0" mnemonicParsing="false" onAction="#handleStop" prefHeight="24.0" prefWidth="74.0" text="Stop">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="playButton" layoutX="367.0" layoutY="382.0" mnemonicParsing="false" onAction="#handlePlay" prefHeight="23.0" prefWidth="74.0" text="Play">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="pauseButton" layoutX="442.0" layoutY="382.0" mnemonicParsing="false" onAction="#handlePause" prefHeight="30.0" prefWidth="74.0" text="Pause">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label fx:id="songTitleLabel" alignment="CENTER" layoutX="291.0" layoutY="287.0" prefHeight="38.0" prefWidth="225.0" text="Song">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+       <Label fx:id="songArtistLabel" alignment="CENTER" layoutX="291.0" layoutY="312.0" prefHeight="38.0" prefWidth="225.0" text="Artist">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <ProgressBar fx:id="progressBar" layoutX="292.0" layoutY="357.0" prefHeight="23.0" prefWidth="225.0" progress="0.0" />
+      <Label fx:id="remainingTimeLabel" alignment="CENTER" layoutX="289.0" layoutY="420.0" prefHeight="21.0" prefWidth="225.0" />
+      <ListView fx:id="playlistsListView" layoutX="542.0" layoutY="49.0" prefHeight="184.0" prefWidth="225.0" />
+      <ListView fx:id="createdPlaylistsListView" layoutX="542.0" layoutY="265.0" prefHeight="184.0" prefWidth="225.0" />
+      <Button layoutX="781.0" layoutY="160.0" mnemonicParsing="false" onAction="#addToPlaylist" text="Add to Playlist" />
+      <Button layoutX="782.0" layoutY="202.0" mnemonicParsing="false" onAction="#deletePlaylist" text="Delete Playlist" />
+       <Button fx:id="playPlaylistButton" layoutX="780.0" layoutY="342.0" mnemonicParsing="false" onAction="#playPlaylist" prefHeight="31.0" prefWidth="113.0" text="Play Playlist" />
+      <Button layoutX="781.0" layoutY="382.0" mnemonicParsing="false" onAction="#deleteFromPlaylist" prefHeight="31.0" prefWidth="113.0" text="Delete From Playlist">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+      <TextField fx:id="searchField" layoutX="38.0" layoutY="44.0" prefHeight="31.0" prefWidth="155.0" promptText="Search for a song" />
+      <Button fx:id="openFolderButton" layoutX="781.0" layoutY="420.0" mnemonicParsing="false" onAction="#openFolder" prefHeight="31.0" prefWidth="113.0" text="Select Folder" />
+      <Button fx:id="searchButton" layoutX="191.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleSearchButtonAction" prefHeight="31.0" prefWidth="74.0" text="Search" />
+
+   </children>
+
+</AnchorPane>
